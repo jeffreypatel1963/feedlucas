@@ -90,7 +90,7 @@
             bottom: 0;
             width: 100%;
             font-size: 14px;
-            z-index: 1000; /* Ensures the footer is above the loading chunks */
+            z-index: 1000;
         }
 
         .marquee {
@@ -177,7 +177,8 @@
             var response = document.getElementById("response");
             
             if (data === "meat") {
-                response.innerText = "Lucas pounces on the kitten and purrs contently. He is satisfied.";
+                window.close();
+                response.innerText = "Lucas pounces on the kitten and purrs contently. He is satisfied. N.D. Cent. Code, §§ 12.1-20-03, 12.1-20-05, 12.1-20-07";
             } else if (data === "doe") {
                 response.innerText = "A tempting snack, but it fails to satiate Lucas.";
             } else if (data === "fish") {
@@ -192,7 +193,7 @@
         function revealChunks() {
             const chunks = document.querySelectorAll('.chunk');
             chunks.forEach((chunk, index) => {
-                const delay = Math.random() * 500 + (index * 500); // Random delay with incremental base delay
+                const delay = Math.random() * 500 + (index * 500);
                 setTimeout(() => {
                     chunk.classList.add('hidden');
                 }, delay);
